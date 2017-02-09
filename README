@@ -1,14 +1,14 @@
 1. 下载软件
 
-```sh
+```Bash
 #wget http://caspian.dotconf.net/menu/Software/SendEmail/sendEmail-v1.56.tar.gz
 #或者使用目录下sendEmail-v1.56.tar.gz压缩包
 ```
 
 2.创建执行目录
-
-    [ -d /usr/local/ ] || mkdir -p /usr/local/bin
-
+```Bash
+[ -d /usr/local/ ] || mkdir -p /usr/local/bin
+```
 3.解压软件
 
     tar zxf sendEmail-v1.56.tar.gz -C /usr/src
