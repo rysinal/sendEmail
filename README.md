@@ -1,4 +1,4 @@
-下载软件
+1. 下载软件
 
 ```Bash
 #wget http://caspian.dotconf.net/menu/Software/SendEmail/sendEmail-v1.56.tar.gz
@@ -10,28 +10,29 @@
 [ -d /usr/local/ ] || mkdir -p /usr/local/bin
 ```
 3.解压软件
-
-    tar zxf sendEmail-v1.56.tar.gz -C /usr/src
-  
+```Bash
+tar zxf sendEmail-v1.56.tar.gz -C /usr/src
+```
 4.进入目录
-
-    cd /usr/src/sendEmail-v1.56
-
+```Bash
+cd /usr/src/sendEmail-v1.56
+```
 5.复制文件，并设置权限
-
-    cp -a sendEmail /usr/local/bin
-    chmod +x /usr/local/bin/sendEmail
-  
+```Bash
+cp -a sendEmail /usr/local/bin
+chmod +x /usr/local/bin/sendEmail
+```
 6.安装组件
-
-    yum install perl-Net-SSLeay perl-IO-Socket-SSL -y
-  
+```Bash
+yum install perl-Net-SSLeay perl-IO-Socket-SSL -y
+```
 7.测试邮件功能
-
-   # /usr/local/bin/sendEmail -f from@163.com -t to@qq.com -s smtp.163.com -u "我是邮件主题" -o message-content-type=html -o message-charset=utf8 -xu from@163.com -xp 123456 -m "我是邮件内容"
-  
+```Bash
+# /usr/local/bin/sendEmail -f from@163.com -t to@qq.com -s smtp.163.com -u "我是邮件主题" -o message-content-type=html -o message-charset=utf8 -xu from@163.com -xp 123456 -m "我是邮件内容"
+```
 命令说明：
 
+```
     /usr/local/bin/sendEmail        命令主程序
     -f from@163.com                 发件人邮箱
     -t to@163.com                   收件人邮箱
@@ -42,3 +43,4 @@
     -xu from@163.com                发件人邮箱的用户名
     -xp 123456                      发件人邮箱密码
     -m "我是邮件内容"                 邮件的具体内容
+```
